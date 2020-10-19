@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Kалькулятор</title>
+    <title>Calculator</title>
 </head>
 <body>
-<main>
-    <div class="container">
-        <div class="item input"></div>
+<form action="" name="calculator">
+    <input type="text" name="screen" disabled>
 
+    <hr/>
 
-        <div class="item" onclick="insert('(')">(</div>
-        <div class="item" onclick="insert(')')">)</div>
+    <input type="button" value="(" onclick="calculator.screen.value += '('">
+    <input type="button" value=")" onclick="calculator.screen.value += ')'">
+    <input type="button" value="CE">
+    <input type="button" value="&larr;">
 
-        <div class="item clean" onclick="clean()">C</div>
-        <div class="item percent" onclick="percent()">%</div>
+    <br/>
 
-        <div class="item" onclick="insert('7')">7</div>
-        <div class="item" onclick="insert('8')">8</div>
-        <div class="item" onclick="insert('9')">9</div>
+    <input type="button" value="7" onclick="calculator.screen.value += '7'">
+    <input type="button" value="8" onclick="calculator.screen.value += '8'">
+    <input type="button" value="9" onclick="calculator.screen.value += '9'">
+    <input type="button" value="+" onclick="calculator.screen.value += '+'">
 
-        <div class="item" onclick="insert('4')">4</div>
-        <div class="item" onclick="insert('5')">5</div>
-        <div class="item" onclick="insert('6')">6</div>
-        <div class="item sub" onclick="insert('-')">-</div>
+    <br/>
 
+    <input type="button" value="4" onclick="calculator.screen.value += '4'">
+    <input type="button" value="5" onclick="calculator.screen.value += '5'">
+    <input type="button" value="6" onclick="calculator.screen.value += '6'">
+    <input type="button" value="-" onclick="calculator.screen.value += '-'">
 
-        <div class="item" onclick="insert('1')">1</div>
-        <div class="item" onclick="insert('2')">2</div>
-        <div class="item" onclick="insert('3')">3</div>
-        <div class="item add" onclick="insert('+')">+</div>
+    <br/>
 
+    <input type="button" value="1" onclick="calculator.screen.value += '1'">
+    <input type="button" value="2" onclick="calculator.screen.value += '2'">
+    <input type="button" value="3" onclick="calculator.screen.value += '3'">
+    <input type="button" value="*" onclick="calculator.screen.value += '*'">
 
-        <div class="item zero" onclick="insert('0')">0</div>
-        <div class="item" onclick="insert('.')">,</div>
-        <div class="item equal" onclick="equal()">=</div>
-    </div>
-</main>
+    <br/>
+
+    <input type="button" value="0" onclick="calculator.screen.value += '0'">
+    <input type="button" value="." onclick="calculator.screen.value += '.'">
+    <input type="button" value="/" onclick="calculator.screen.value += '/'">
+    <input type="button" value="=" onclick="calculator.screen.value = eval(calculator.screen.value)">
+
+</form>
 <script src="js/script.js"></script>
 </body>
 </html>
