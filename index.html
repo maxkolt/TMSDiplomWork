@@ -2,33 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.scss"/>
+    <link rel="stylesheet" href="css/main.css"/>
     <title>Kалькулятор</title>
 </head>
 <body>
 <main>
-    <input type="number" value="0">
-    <div class="keys">
-        <button class="op__key" op="clear">C</button>
-        <button class="op__key" op="bracket">(</button>
-        <button class="op__key" op="bracket2">)</button>
-        <button class="op__key" op="divide">/</button>
-        <button class="num__key">7</button>
-        <button class="num__key">8</button>
-        <button class="num__key">9</button>
-        <button class="op__key" op="multiply">X</button>
-        <button class="num__key">4</button>
-        <button class="num__key">5</button>
-        <button class="num__key">6</button>
-        <button class="op__key" op="subtrack">-</button>
-        <button class="num__key">1</button>
-        <button class="num__key">2</button>
-        <button class="num__key">3</button>
-        <button class="op__key" op="add">+</button>
-        <button class="num__key">0</button>
-        <button class="op__key" op="parcent">%</button>
-        <button class="num__key">.</button>
-        <button class="eq__key" op="add">=</button>
+    <div class="container">
+        <div class="item input"></div>
+
+
+        <div class="item" onclick="insert('(')">(</div>
+        <div class="item" onclick="insert(')')">)</div>
+
+        <div class="item clean" onclick="clean()">C</div>
+        <div class="item percent" onclick="percent()">%</div>
+
+        <div class="item" onclick="insert('7')">7</div>
+        <div class="item" onclick="insert('8')">8</div>
+        <div class="item" onclick="insert('9')">9</div>
+
+        <div class="item" onclick="insert('4')">4</div>
+        <div class="item" onclick="insert('5')">5</div>
+        <div class="item" onclick="insert('6')">6</div>
+        <div class="item sub" onclick="insert('-')">-</div>
+
+
+        <div class="item" onclick="insert('1')">1</div>
+        <div class="item" onclick="insert('2')">2</div>
+        <div class="item" onclick="insert('3')">3</div>
+        <div class="item add" onclick="insert('+')">+</div>
+
+
+        <div class="item zero" onclick="insert('0')">0</div>
+        <div class="item" onclick="insert('.')">,</div>
+        <div class="item equal" onclick="equal()">=</div>
     </div>
 </main>
 <script src="js/script.js"></script>
