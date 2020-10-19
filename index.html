@@ -2,49 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css"/>
     <title>Calculator</title>
 </head>
 <body>
-<form action="" name="calculator">
-    <input type="text" name="screen" disabled>
+<main>
+    <form action="" name="calculator">
+        <p class="brand">CASIO</p>
+        <input type="text" name="screen" disabled>
 
-    <hr/>
+        <hr/>
 
-    <input type="button" value="(" onclick="calculator.screen.value += '('">
-    <input type="button" value=")" onclick="calculator.screen.value += ')'">
-    <input type="button" value="CE">
-    <input type="button" value="&larr;">
+        <input type="button" value="(" onclick="calculator.screen.value += '('">
+        <input type="button" value=")" onclick="calculator.screen.value += ')'">
+        <input type="button" value="CE" onclick="calculator.screen.value = ''">
+        <input type="button" value="&larr;" onclick="calculator.screen.value = calculator.screen.value.slice(0, -1)">
 
-    <br/>
+        <br/>
 
-    <input type="button" value="7" onclick="calculator.screen.value += '7'">
-    <input type="button" value="8" onclick="calculator.screen.value += '8'">
-    <input type="button" value="9" onclick="calculator.screen.value += '9'">
-    <input type="button" value="+" onclick="calculator.screen.value += '+'">
+        <input type="button" value="7" onclick="calculator.screen.value += '7'">
+        <input type="button" value="8" onclick="calculator.screen.value += '8'">
+        <input type="button" value="9" onclick="calculator.screen.value += '9'">
+        <input type="button" value="+" onclick="calculator.screen.value += '+'">
 
-    <br/>
+        <br/>
 
-    <input type="button" value="4" onclick="calculator.screen.value += '4'">
-    <input type="button" value="5" onclick="calculator.screen.value += '5'">
-    <input type="button" value="6" onclick="calculator.screen.value += '6'">
-    <input type="button" value="-" onclick="calculator.screen.value += '-'">
+        <input type="button" value="4" onclick="calculator.screen.value += '4'">
+        <input type="button" value="5" onclick="calculator.screen.value += '5'">
+        <input type="button" value="6" onclick="calculator.screen.value += '6'">
+        <input type="button" value="-" onclick="calculator.screen.value += '-'">
 
-    <br/>
+        <br/>
 
-    <input type="button" value="1" onclick="calculator.screen.value += '1'">
-    <input type="button" value="2" onclick="calculator.screen.value += '2'">
-    <input type="button" value="3" onclick="calculator.screen.value += '3'">
-    <input type="button" value="*" onclick="calculator.screen.value += '*'">
+        <input type="button" value="1" onclick="calculator.screen.value += '1'">
+        <input type="button" value="2" onclick="calculator.screen.value += '2'">
+        <input type="button" value="3" onclick="calculator.screen.value += '3'">
+        <input type="button" value="*" onclick="calculator.screen.value += '*'">
 
-    <br/>
+        <br/>
 
-    <input type="button" value="0" onclick="calculator.screen.value += '0'">
-    <input type="button" value="." onclick="calculator.screen.value += '.'">
-    <input type="button" value="/" onclick="calculator.screen.value += '/'">
-    <input type="button" value="=" onclick="calculator.screen.value = eval(calculator.screen.value)">
+        <input type="button" value="0" onclick="calculator.screen.value += '0'">
+        <input type="button" value="." onclick="calculator.screen.value += '.'">
+        <input type="button" value="/" onclick="calculator.screen.value += '/'">
+        <input type="button" value="=" onclick="calculator.screen.value = eval(calculator.screen.value)">
+    </form>
 
-</form>
+</main>
 <script src="js/script.js"></script>
 </body>
 </html>
