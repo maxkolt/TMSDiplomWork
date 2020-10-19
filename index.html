@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" href="css/main.scss"/>
     <title>Kалькулятор</title>
 </head>
 <body>
-<div class="calc">
-    <form class="form" name="form">
-        <input class="output">
-    </form>
-    <table>
-        <tr>
-            <td colspan="3"><input class="button ac btnColor" type="button" value="AC" onclick="clean()"></td>
-            <td><input class="button btnColor" type="button" value="/" onclick="insert('/')"></td>
-        </tr>
-        <tr>
-            <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
-            <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
-            <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
-            <td><input class="button btnColor" type="button" value="*" onclick="insert('*')"></td>
-        </tr>
-        <tr>
-            <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
-            <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
-            <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
-            <td><input class="button btnColor" type="button" value="-" onclick="insert('-')"></td>
-        </tr>
-        <tr>
-            <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
-            <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
-            <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
-            <td><input class="button btnColor" type="button" value="+" onclick="insert('+')"></td>
-        </tr>
-        <tr>
-            <td><input class="button" type="button" value="0" onclick="insert(0)"></td>
-            <td><input class="button" type="button" value="." onclick="insert('.')"></td>
-            <td colspan="2"><input class="button equal" type="button" value="=" onclick="equal()"></td>
-        </tr>
-    </table>
-</div>
+<main>
+    <input type="number" value="0">
+    <div class="keys">
+        <button class="op__key" op="clear">C</button>
+        <button class="op__key" op="bracket">(</button>
+        <button class="op__key" op="bracket2">)</button>
+        <button class="op__key" op="divide">/</button>
+        <button class="num__key">7</button>
+        <button class="num__key">8</button>
+        <button class="num__key">9</button>
+        <button class="op__key" op="multiply">X</button>
+        <button class="num__key">4</button>
+        <button class="num__key">5</button>
+        <button class="num__key">6</button>
+        <button class="op__key" op="subtrack">-</button>
+        <button class="num__key">1</button>
+        <button class="num__key">2</button>
+        <button class="num__key">3</button>
+        <button class="op__key" op="add">+</button>
+        <button class="num__key">0</button>
+        <button class="op__key" op="parcent">%</button>
+        <button class="num__key">.</button>
+        <button class="eq__key" op="add">=</button>
+    </div>
+</main>
 <script src="js/script.js"></script>
 </body>
 </html>
