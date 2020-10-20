@@ -39,5 +39,42 @@ function clearScreen() {
 }
 
 function getOperand(operand) {
+    let input_var = document.getElementById('input');
+    switch (operand) {
+        case '+':
+            input_var.value += '+';
+            break;
+        case '-':
+            input_var.value += '-';
+            break;
+        case '/':
+            input_var.value += '/';
+            break;
+        case '.':
+            input_var.value += '.';
+            break;
+        case '*':
+            input_var.value += '*';
+            break;
+        case '(':
+            input_var.value += '(';
+            break;
+        case ')':
+            input_var.value += ')';
+            break;
+    }
+}
 
+function backspace() {
+    let input_var = document.getElementById('input');
+    let x = input_var.value;
+    if (x.length > 0) {
+        x = x.substring(0, x.length - 1);
+        input_var.value = x;
+    }
+}
+
+function compute() {
+    let input_var = document.getElementById('input');
+    Math.floor(+eval(input_var.value));
 }
